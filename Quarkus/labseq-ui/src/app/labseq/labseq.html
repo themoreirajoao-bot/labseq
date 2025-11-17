@@ -1,0 +1,16 @@
+<h1>LabSeq Calculator</h1>
+
+<div>
+  <label>Enter number:</label>
+  <input type="number" [(ngModel)]="n">
+  <button (click)="calculate()">Calculate</button>
+  <button (click)="reset()">Reset Cache</button>
+</div>
+
+<div *ngIf="loading">Loading...</div>
+
+<div *ngIf="result">
+  <h2>Result</h2>
+  <div class="break-lines">{{ result }}</div>
+
+</div>
